@@ -11,13 +11,13 @@
 
 **GitHub Action 将自述文件翻译成任何语言**
 
-这是一个 GitHub Action，可以自动将你的 repo 中的自述文件翻译成指定的语言。
+This is a GitHub Action that automatically translate the readme in your repo to a specified language.
 
-_提交的[DEV：GitHub 开源行动！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)编程马拉松_
+_提交给[DEV：开源的 GitHub 行动！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客马拉松_
 
 ## 设置
 
-1.  **添加工作流文件**到您的项目（例如`.github/workflows/readme.yml`):
+1.  **添加工作流程文件**到您的项目（例如`.github/workflows/readme.yml`):
 
 ```yaml
 name: Translate README
@@ -65,16 +65,16 @@ jobs:
 
 您可以使用以下选项进一步配置操作：
 
--   `LANG`：您要将自述文件翻译成的语言。默认为简体中文。 （我是加纳人）可在下方找到支持的语言。
-    （默认：`zh-CH`） （必需的：`false`)
+-   `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
+    (default: `zh-CH`） （必需的：`false`)
 
 ## 支持的语言
 
-可在此处找到支持的语言[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+可以在此处找到支持的语言<https://cloud.google.com/translate/docs/languages>
 
 ### 问题
 
-查看[这里](https://github.com/dephraiim/translate-readme/issues/1)与此操作相关的问题。
+查看[这里](https://github.com/dephraiim/translate-readme/issues/1)对于与此操作相关的问题。
 
 ### 发展
 
