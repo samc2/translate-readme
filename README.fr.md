@@ -1,23 +1,23 @@
-# Traduire l'action Lisez-moi
+# Traduire l’action Lisez-moi
 
-## Traduction LISEZMOI
+## Traduction du fichier README
 
 -   [Anglais](README.md)
 -   [Chinois simplifié](README.zh-CN.md)
--   [chinois traditionnel](README.zh-TW.md)
+-   [Chinois traditionnel](README.zh-TW.md)
 -   [hindi](README.hi.md)
 -   [Française](README.fr.md)
 -   [arabe](README.ar.md)
 
 **GitHub Action pour traduire Readme dans n'importe quelle langue**
 
-This is a GitHub Action that automatically translate the readme in your repo to a specified language.
+Il s'agit d'une action GitHub qui traduit automatiquement le fichier Lisez-moi de votre dépôt dans une langue spécifiée.
 
-_Une soumission pour le[DEV : Actions GitHub pour l'Open Source !](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
+_Une soumission pour le[DEV : Actions GitHub pour l'Open Source !](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
 
-## Installer
+## Installation
 
-1.  **Ajouter un fichier de flux de travail**à votre projet (ex.`.github/workflows/readme.yml`):
+1.  **Ajouter un fichier de workflow**à votre projet (par ex.`.github/workflows/readme.yml`):
 
 ```yaml
 name: Translate README
@@ -61,11 +61,11 @@ jobs:
 
 ## Configuration
 
-### Choix
+### Possibilités
 
 Vous pouvez configurer davantage l'action avec les options suivantes :
 
--   `LANG`: La langue dans laquelle vous souhaitez traduire votre fichier readme. La valeur par défaut est le chinois simplifié. (Je suis un Ghanéen) Les langues prises en charge peuvent être trouvées ci-dessous.
+-   `LANG`: La langue dans laquelle vous souhaitez traduire votre fichier Lisez-moi. La valeur par défaut est le chinois simplifié. (Je suis ghanéen) Les langues prises en charge se trouvent ci-dessous.
     (défaut:`zh-CH`) (requis:`false`)
 
 ## Langues prises en charge
