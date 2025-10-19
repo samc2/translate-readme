@@ -1,23 +1,23 @@
 # रीडमी एक्शन का अनुवाद करें
 
-## रीडमे अनुवाद
+## रीडमी अनुवाद
 
 -   [अंग्रेज़ी](README.md)
 -   [सरलीकृत चीनी](README.zh-CN.md)
 -   [परंपरागत चीनी](README.zh-TW.md)
 -   [हिंदी](README.hi.md)
--   [फ्रेंच](README.fr.md)
+-   [फ़्रेंच](README.fr.md)
 -   [अरब](README.ar.md)
 
-**रीडमी का किसी भी भाषा में अनुवाद करने के लिए गिटहब एक्शन**
+**रीडमी को किसी भी भाषा में अनुवाद करने के लिए GitHub एक्शन**
 
-यह एक गिटहब एक्शन है जो आपके रेपो में रीडमी को एक निर्दिष्ट भाषा में स्वचालित रूप से अनुवादित करता है।
+यह एक GitHub क्रिया है जो स्वचालित रूप से आपके रेपो में रीडमी को एक निर्दिष्ट भाषा में अनुवादित करती है।
 
-_के लिए एक सबमिशन[DEV: ओपन सोर्स के लिए गिटहब एक्शन!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)आयोजित हैकथॉन_
+_के लिए एक सबमिशन[DEV: ओपन सोर्स के लिए GitHub क्रियाएँ!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)आयोजित हैकथॉन_
 
 ## स्थापित करना
 
-1.  **कार्यप्रवाह फ़ाइल जोड़ें**आपकी परियोजना के लिए (उदा।`.github/workflows/readme.yml`):
+1.  **वर्कफ़्लो फ़ाइल जोड़ें**आपके प्रोजेक्ट के लिए (उदा.`.github/workflows/readme.yml`):
 
 ```yaml
 name: Translate README
@@ -63,18 +63,18 @@ jobs:
 
 ### विकल्प
 
-आप निम्न विकल्पों के साथ कार्रवाई को और कॉन्फ़िगर कर सकते हैं:
+आप निम्नलिखित विकल्पों के साथ कार्रवाई को आगे कॉन्फ़िगर कर सकते हैं:
 
 -   `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
     (default: `zh-CH`) (आवश्यक:`false`)
 
 ## समर्थित भाषाएँ
 
-समर्थित भाषाएँ यहाँ पाई जा सकती हैं[हत्तपः://क्लाउड.गूगल.कॉम/ट्रांसलेट/डॉक्स/लैंग्वेजेज](https://cloud.google.com/translate/docs/languages)
+समर्थित भाषाएँ यहाँ पाई जा सकती हैं<https://cloud.google.com/translate/docs/languages>
 
-### मुद्दे
+### समस्याएँ
 
-जांच[यहां](https://github.com/dephraiim/translate-readme/issues/1)इस कार्रवाई से संबंधित मुद्दों के लिए।
+जाँच करना[यहाँ](https://github.com/dephraiim/translate-readme/issues/1)इस कार्रवाई से संबंधित मुद्दों के लिए.
 
 ### विकास
 
