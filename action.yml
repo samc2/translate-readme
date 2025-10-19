@@ -1,15 +1,15 @@
 name: Translate Readme Action
-author: Ephraim Atta-Duncan
+author: samc2
 description: Translate the Readme to another language
 
 inputs:
   LANG:
     description: 'The Language you want to translate to'
     required: false
-    default: 'zh-CN'
+    default: 'en'
 
 runs:
-  using: 'node12'
+  using: 'node24'
   main: 'dist/index.js'
 
 branding:
