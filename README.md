@@ -69,7 +69,7 @@ jobs:
 
 You can configure the action further with the following options:
 
-- `LANG`: The language you want to translate your readme to. The default is English. (I'm a American) The supported languages can be found below.
+- `LANG`: The language you want to translate your readme to. The default is English. The supported languages can be found below.
   (default: `en`) (required: `false`)
 
 ## Supported Languages
