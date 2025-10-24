@@ -8,7 +8,7 @@
 -   [印地语](README.hi.md)
 -   [法文](README.fr.md)
 -   [阿拉伯](README.ar.md)
--   [English](README.en.md)
+-   [英语](README.en.md)
 
 **GitHub Action将自述文件翻译成任何语言**
 
