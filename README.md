@@ -1,7 +1,7 @@
 # Translate Readme Action
 
 ## README Translation
-- [English](README.md)
+- [English](README.en.md)
 - [简体中文](README.zh-CN.md)
 - [繁体中文](README.zh-TW.md)
 - [हिंदी](README.hi.md)
@@ -29,30 +29,36 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v5
+        uses: actions/setup-node@v6
         with:
-          node-version: 12.x
-      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+          node-version: 24
+      - run: npm ci
+      - run: npm test
+      # ISO Language Codes: https://cloud.google.com/translate/docs/languages
+     - name: Adding README - English
+        uses: samc2/translate-readme@main
+        with:
+          LANG: en  
       - name: Adding README - Chinese Simplified
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: zh-CN
       - name: Adding README - Chinese Traditional
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: zh-TW
       - name: Adding README - Hindi
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: hi
       - name: Adding README - Arabic
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: ar
       - name: Adding README - French
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: fr
 ```
@@ -63,8 +69,8 @@ jobs:
 
 You can configure the action further with the following options:
 
-- `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
-  (default: `zh-CH`) (required: `false`)
+- `LANG`: The language you want to translate your readme to. The default is English. (I'm a American) The supported languages can be found below.
+  (default: `en`) (required: `false`)
 
 ## Supported Languages
 
@@ -72,7 +78,7 @@ Languages supported can be found here https://cloud.google.com/translate/docs/la
 
 ### Issues
 
-Check [here](https://github.com/dephraiim/translate-readme/issues/1) for issues related to this action.
+Check [here](https://github.com/samc2/translate-readme/issues/1) for issues related to this action.
 
 ### Development
 
