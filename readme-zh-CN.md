@@ -8,6 +8,7 @@
 -   [印地语](README.hi.md)
 -   [法文](README.fr.md)
 -   [阿拉伯](README.ar.md)
+-   [English](README.en.md)
 
 **GitHub Action将自述文件翻译成任何语言**
 
@@ -31,32 +32,38 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
       build:
         runs-on: ubuntu-latest
         steps:
-          - uses: actions/checkout@v2
           - name: Setup Node.js
-            uses: actions/setup-node@v1
+          - uses: actions/checkout@v5
+            uses: actions/setup-node@v6
             with:
-              node-version: 12.x
-          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+              node-version: 24
+          - run: npm ci
+          - run: npm test
+          # ISO Language Codes: https://cloud.google.com/translate/docs/languages  
           - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: zh-CN
           - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: zh-TW
           - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: hi
           - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: ar
           - name: Adding README - French
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: fr
+          - name: Adding README - English
+            uses: samc2/translate-readme@main
+            with:
+              LANG: en  
 
 ## 组态
 
@@ -64,8 +71,8 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
 
 您可以使用以下选项进一步配置操作：
 
--   `LANG`：您要将自述文件翻译成的语言。默认为简体中文。 （我是加纳人）可以在下面找到支持的语言。
-    （默认：`zh-CH`）（必填：`false`)
+-   `LANG`：您要将自述文件翻译成的语言。默认为英语 。 可以在下面找到支持的语言。
+    （默认：`en`）（必填：`false`)
 
 ## 支持的语言
 
@@ -73,7 +80,7 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
 
 ### 问题
 
-检查一下[这里](https://github.com/dephraiim/translate-readme/issues/1)有关与此操作有关的问题。
+检查一下[这里](https://github.com/samc2/translate-readme/issues/1)有关与此操作有关的问题。
 
 ### 发展历程
 
