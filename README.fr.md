@@ -8,6 +8,7 @@
 -   [hindi](README.hi.md)
 -   [Française](README.fr.md)
 -   [arabe](README.ar.md)
+-   [English](README.en.md)
 
 **GitHub Action pour traduire Readme dans n'importe quelle langue**
 
@@ -31,32 +32,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v5
+        uses: actions/setup-node@v6
         with:
-          node-version: 12.x
-      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+          node-version: 24
+      - run: npm ci
+      - run: npm test
+      # ISO Language Codes: https://cloud.google.com/translate/docs/languages  
       - name: Adding README - Chinese Simplified
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: zh-CN
       - name: Adding README - Chinese Traditional
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: zh-TW
       - name: Adding README - Hindi
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: hi
       - name: Adding README - Arabic
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: ar
       - name: Adding README - French
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: fr
+      - name: Adding README - English
+        uses: samc2/translate-readme@main
+        with:
+          LANG: en
 ```
 
 ## Configuration
@@ -74,7 +81,7 @@ Les langues prises en charge peuvent être trouvées ici<https://cloud.google.co
 
 ### Problèmes
 
-Vérifier[ici](https://github.com/dephraiim/translate-readme/issues/1)pour les problèmes liés à cette action.
+Vérifier[ici](https://github.com/samc2/translate-readme/issues/1)pour les problèmes liés à cette action.
 
 ### Développement
 
