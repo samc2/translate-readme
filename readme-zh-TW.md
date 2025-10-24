@@ -8,6 +8,7 @@
 -   [印地語](README.hi.md)
 -   [法文](README.fr.md)
 -   [阿拉伯](README.ar.md)
+-   [English](README.en.md)
 
 **GitHub Action將自述文件翻譯成任何語言**
 
@@ -31,32 +32,38 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
       build:
         runs-on: ubuntu-latest
         steps:
-          - uses: actions/checkout@v2
           - name: Setup Node.js
-            uses: actions/setup-node@v1
+          - uses: actions/checkout@v5
+            uses: actions/setup-node@v6
             with:
-              node-version: 12.x
+              node-version: 24
+          - run: npm ci
+          - run: npm test
           # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
           - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: zh-CN
           - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: zh-TW
           - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: hi
           - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: ar
           - name: Adding README - French
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: fr
+          - name: Adding README - English
+            uses: samc2/translate-readme@main
+            with:
+              LANG: en
 
 ## 組態
 
@@ -64,8 +71,8 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
 
 您可以使用以下選項進一步配置操作：
 
--   `LANG`：您要將自述文件翻譯成的語言。默認為簡體中文。 （我是加納人）可以在下面找到支持的語言。
-    （默認：`zh-CH`）（必填：`false`)
+-   `LANG`：您要將自述文件翻譯成的語言。預設為英語。 可以在下面找到支持的語言。
+    （默認：`en`）（必填：`false`)
 
 ## 支持的語言
 
@@ -73,7 +80,7 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
 
 ### 問題
 
-檢查一下[這裡](https://github.com/dephraiim/translate-readme/issues/1)有關與此操作有關的問題。
+檢查一下[這裡](https://github.com/samc2/translate-readme/issues/1)有關與此操作有關的問題。
 
 ### 發展歷程
 
