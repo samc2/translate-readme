@@ -8,6 +8,7 @@
 -   [印地语](README.hi.md)
 -   [法语](README.fr.md)
 -   [阿拉伯](README.ar.md)
+-   [English](README.en.md)
 
 **GitHub Action 将自述文件翻译成任何语言**
 
@@ -31,32 +32,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v5
+        uses: actions/setup-node@v6
         with:
-          node-version: 12.x
-      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+          node-version: 24
+      - run: npm ci
+      - run: npm test
+      # ISO Language Codes: https://cloud.google.com/translate/docs/languages  
       - name: Adding README - Chinese Simplified
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: zh-CN
       - name: Adding README - Chinese Traditional
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: zh-TW
       - name: Adding README - Hindi
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: hi
       - name: Adding README - Arabic
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: ar
       - name: Adding README - French
-        uses: dephraiim/translate-readme@main
+        uses: samc2/translate-readme@main
         with:
           LANG: fr
+      - name: Adding README - English
+        uses: samc2/translate-readme@main
+        with:
+          LANG: en
 ```
 
 ## 配置
@@ -65,8 +72,8 @@ jobs:
 
 您可以使用以下选项进一步配置操作：
 
--   `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
-    (default: `zh-CH`） （必需的：`false`)
+-   `LANG`: The language you want to translate your readme to. The default is English. The supported languages can be found below.
+    (default: `en`） （必需的：`false`)
 
 ## 支持的语言
 
@@ -74,7 +81,7 @@ jobs:
 
 ### 问题
 
-查看[这里](https://github.com/dephraiim/translate-readme/issues/1)对于与此操作相关的问题。
+查看[这里](https://github.com/samc2/translate-readme/issues/1)对于与此操作相关的问题。
 
 ### 发展
 
