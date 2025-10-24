@@ -37,7 +37,7 @@ jobs:
         uses: samc2/translate-readme@main
         with:
           LANG: en
-       - name: Adding README - French
+       - name: Adding README - English
         uses: samc2/translate-readme@main
         with:
           LANG: en
