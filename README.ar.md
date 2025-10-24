@@ -38,7 +38,7 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm test
-      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+      # ISO Language Codes: https://cloud.google.com/translate/docs/languages  
       - name: Adding README - Chinese Simplified
         uses: samc2/translate-readme@main
         with:
