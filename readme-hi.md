@@ -8,6 +8,7 @@
 -   [हिंदी](README.hi.md)
 -   [फ्रेंच](README.fr.md)
 -   [अरबी](README.ar.md)
+-   [अंग्रेज़ी ](README.en.md)
 
 **GitHub किसी भी भाषा में Readme का अनुवाद करने की क्रिया**
 
@@ -31,32 +32,38 @@ _के लिए एक सबमिशन[DEV: ओपन सोर्स क�
       build:
         runs-on: ubuntu-latest
         steps:
-          - uses: actions/checkout@v2
           - name: Setup Node.js
-            uses: actions/setup-node@v1
+          - uses: actions/checkout@v5
+            uses: actions/setup-node@v6
             with:
-              node-version: 12.x
+              node-version: 24
+          - run: npm ci
+          - run: npm test
           # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
           - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: zh-CN
           - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: zh-TW
           - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: hi
           - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: ar
           - name: Adding README - French
-            uses: dephraiim/translate-readme@main
+            uses: samc2/translate-readme@main
             with:
               LANG: fr
+          - name: Adding README - English
+            uses: samc2/translate-readme@main
+            with:
+              LANG: en  
 
 ## विन्यास
 
@@ -64,8 +71,8 @@ _के लिए एक सबमिशन[DEV: ओपन सोर्स क�
 
 आप निम्न विकल्पों के साथ आगे की कार्रवाई को कॉन्फ़िगर कर सकते हैं:
 
--   `LANG`: जिस भाषा में आप अपने रीडमी का अनुवाद करना चाहते हैं। डिफ़ॉल्ट सरलीकृत चीनी है। (मैं एक घाना हूँ) समर्थित भाषाओं को नीचे पाया जा सकता है।
-    (चूक:`zh-CH`) (आवश्यक:`false`)
+-   `LANG`: जिस भाषा में आप अपने रीडमी का अनुवाद करना चाहते हैं। डिफ़ॉल्ट अंग्रेजी है  है।  समर्थित भाषाओं को नीचे पाया जा सकता है।
+    (चूक:`en`) (आवश्यक:`false`)
 
 ## समर्थित भाषाएँ
 
@@ -73,7 +80,7 @@ _के लिए एक सबमिशन[DEV: ओपन सोर्स क�
 
 ### मुद्दे
 
-जाँच[यहाँ](https://github.com/dephraiim/translate-readme/issues/1)इस कार्रवाई से संबंधित मुद्दों के लिए।
+जाँच[यहाँ](https://github.com/samc2/translate-readme/issues/1)इस कार्रवाई से संबंधित मुद्दों के लिए।
 
 ### विकास
 
