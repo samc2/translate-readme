@@ -29,18 +29,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Setup Node.js
-      - uses: actions/checkout@v5
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v1
         with:
           node-version: 24
       - run: npm ci
       - run: npm test
-      # ISO Language Codes: https://cloud.google.com/translate/docs/languages
-      - name: Adding README - English
-        uses: samc2/translate-readme@main
-        with:
-          LANG: en  
+      # ISO Language Codes: https://cloud.google.com/translate/docs/languages  
       - name: Adding README - Chinese Simplified
         uses: samc2/translate-readme@main
         with:
@@ -61,7 +57,11 @@ jobs:
         uses: samc2/translate-readme@main
         with:
           LANG: fr
-
+       - name: Adding README - English
+        uses: samc2/translate-readme@main
+        with:
+          LANG: en
+          
 ## Configuration
 
 ### Options
