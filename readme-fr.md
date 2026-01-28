@@ -20,43 +20,79 @@ _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/de
 1.  **Ajouter un fichier de workflow**à votre projet (par ex.`.github/workflows/readme.yml`):
 
 
-    name: Translate README
+    Nom : Traduction du fichier README
 
-    on:
-      push:
-        branches:
-          - main
-          - master
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Setup Node.js
-            uses: actions/setup-node@v1
-            with:
-              node-version: 12.x
-          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
-          - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-CN
-          - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-TW
-          - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: hi
-          - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: ar
-          - name: Adding README - French
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: fr
+Sur :
+
+Push :
+
+Branches :
+
+- main
+- master
+Tâches :
+
+Build :
+
+Système d'exploitation : ubuntu-latest
+
+Étapes :
+
+- Nom : Configuration de Node.js
+
+- Utilise : actes/vérifier@v5
+
+Utilise : actes/setup-node@v6 
+
+Avec :
+
+Version de Node : 24
+
+- Exécuter : npm ci
+
+- Exécuter : npm test
+
+# Codes de langue ISO : https://cloud.google.com/translate/docs/languages
+
+- Nom : Ajout du fichier README - Chinois simplifié
+
+Utilise : samc2/translate-readme@main
+
+Avec :
+
+LANG : zh-CN
+
+- Nom : Ajout du fichier README - Chinois traditionnel
+
+Utilise : samc2/translate-readme@main
+
+Avec :
+
+LANG : zh-TW
+
+- Nom : Ajout du fichier README - Arabe
+
+Utilisation : samc2/translate-readme@main
+
+Avec :
+
+LANG : ar
+
+- Nom : Ajout du fichier README - Français
+
+Utilisation : samc2/translate-readme@main
+
+Avec :
+
+LANG : fr
+
+- Nom : Ajout du fichier README - Anglais
+
+Utilisation : samc2/translate-readme@main
+
+Avec :
+
+LANG : en   
 
 ## Configuration
 
