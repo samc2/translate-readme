@@ -21,50 +21,49 @@ _提交给[DEV：开源的 GitHub 行动！](https://dev.to/devteam/announcing-t
 1.  **添加工作流程文件**到您的项目（例如`.github/workflows/readme.yml`):
 
 ```yaml
-名称：翻译 自述文件 
-          名称：翻译自述文件
+name: Translate README
 
-于：
-  推：
-    分支机构：
-      - 主要
-      - 大师
-职位：
-  构建：
-    运行：乌班图-最新的
-    步骤：
-    -  名称：安装 Node.js
-        使用：行动/结帐@v5
-        使用：操作/设置节点@v6
-        与：
-          节点版本：24
-      - 运行：新项目管理 词
-      - 运行：新项目管理 测试
-      # 国际标准化组织 语言代码：https://cloud.google.com/translate/docs/languages  
-     - 名称：添加 自述文件 - 简体中文
-        使用：samc2/translate-readme@main
-        与：
-          兰格: zh-CN
-     - 名称：添加 自述文件 - 繁体中文
-        使用：samc2/translate-readme@main
-        与：
-          兰格: zh-TW
-     - 名称：添加 自述文件 - 印地语
-        使用：samc2/translate-readme@main
-        与：
-          兰格：hi
-     - 名称：添加 自述文件 - 阿拉伯语
-        使用：samc2/translate-readme@main
-        与：
-          兰格：ar
-     - 名称：添加 自述文件 - 法语
-        使用：samc2/translate-readme@main
-        与：
-          兰格: fr
-     - 名称：添加 自述文件 - 英文
-        使用：samc2/translate-readme@main
-        与：
-          语言: en
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+      - uses: actions/checkout@v5
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: npm ci
+      - run: npm test
+      # ISO Language Codes: https://cloud.google.com/translate/docs/languages
+     - name: Adding README - Chinese Simplified
+        uses: samc2/translate-readme@main
+        with:
+          LANG: zh-CN
+      - name: Adding README - Chinese Traditional
+        uses: samc2/translate-readme@main
+        with:
+          LANG: zh-TW
+      - name: Adding README - Hindi
+        uses: samc2/translate-readme@main
+        with:
+          LANG: hi
+      - name: Adding README - Arabic
+        uses: samc2/translate-readme@main
+        with:
+          LANG: ar
+      - name: Adding README - French
+        uses: samc2/translate-readme@main
+        with:
+          LANG: fr
+      - name: Adding README - English
+        uses: samc2/translate-readme@main
+        with:
+          LANG: en
 ```
 
 ## 配置
