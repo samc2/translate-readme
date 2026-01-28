@@ -32,38 +32,38 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
   構建：
     運行：烏班圖-最新版
     步驟：
-     - 使用：行動/結帳@v2
-     - 名稱：安裝 Node.js
-        使用：操作/設置節點@v1
+     -  名稱：安裝 Node.js
+        使用：行動/結帳@v5
+        使用：操作/設置節點@v6
         與：
           節點版本：24
       - 運行：新項目管理 詞
       - 運行：新項目管理 測試
       # 國際標準化組織 語言代碼：https://cloud.google.com/translate/docs/languages  
-     - 名稱：添加 添加自述文件 - 簡體中文
-        使用：samc2/translate-readme@main
-        與：
-          蘭格: 唷。-中國
      - 名稱：添加 添加自述文件 - 繁體中文
         使用：samc2/translate-readme@main
         與：
-          蘭格: 唷。-台灣
+          蘭格: zh-CN
+     - 名稱：添加 添加自述文件 - 繁體中文
+        使用：samc2/translate-readme@main
+        與：
+          蘭格: zh-TW
      - 名稱：添加自述文件 - 印地語
         使用：samc2/translate-readme@main
         與：
-          蘭格：你好
+          蘭格：hi
      - 名稱：添加自述文件 - 阿拉伯語
         使用：samc2/translate-readme@main
         與：
-          蘭格：阿爾
+          蘭格：ar
      - 名稱：添加自述文件 - 法語
         使用：samc2/translate-readme@main
         與：
-          蘭格: FR
+          蘭格: fr
      - 名稱：添加自述文件 - 英文
         使用：samc2/translate-readme@main
         與：
-          語言: 在
+          語言: en
 
 ## 組態
 
