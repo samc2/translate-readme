@@ -21,6 +21,7 @@ _Une soumission pour le[DEV : Actions GitHub pour l'Open Source !](https://de
 1.  **Ajouter un fichier de workflow**à votre projet (par ex.`.github/workflows/readme.yml`):
 
 ```yaml
+
 Nom : Traduction du fichier README
 
 Sur :
@@ -101,7 +102,8 @@ Utilisation : samc2/translate-readme@main
 
 Avec :
 
-LANG : en 
+LANG : en
+
 ```
 
 ## Configuration
