@@ -19,7 +19,6 @@ _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/de
 
 1.  **Ajouter un fichier de workflow**à votre projet (par ex.`.github/workflows/readme.yml`):
 
-
     Nom : Traduction du fichier README
 Sur :
 Push :
@@ -66,7 +65,7 @@ LANG : en
 Vous pouvez configurer davantage l'action avec les options suivantes:
 
 -   `LANG`: La langue dans laquelle vous souhaitez traduire votre fichier Lisez-moi. La valeur par défaut est le chinois simplifié. (Je suis ghanéen) Les langues prises en charge se trouvent ci-dessous.
-    (défaut:`zh-CH`) (obligatoire:`false`)
+    (défaut:`en`) (obligatoire:`false`)
 
 ## Langues prises en charge
 
