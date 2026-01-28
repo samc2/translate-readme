@@ -21,77 +21,42 @@ _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/de
 
 
     Nom : Traduction du fichier README
-
 Sur :
-
 Push :
-
 Branches :
-
 - main
 - master
 Tâches :
-
 Build :
-
 Système d'exploitation : ubuntu-latest
-
 Étapes :
-
 - Nom : Configuration de Node.js
-
 - Utilise : actes/vérifier@v5
-
 Utilise : actes/setup-node@v6 
-
 Avec :
-
 Version de Node : 24
-
 - Exécuter : npm ci
-
 - Exécuter : npm test
-
 # Codes de langue ISO : https://cloud.google.com/translate/docs/languages
-
 - Nom : Ajout du fichier README - Chinois simplifié
-
 Utilise : samc2/translate-readme@main
-
 Avec :
-
 LANG : zh-CN
-
 - Nom : Ajout du fichier README - Chinois traditionnel
-
 Utilise : samc2/translate-readme@main
-
 Avec :
-
 LANG : zh-TW
-
 - Nom : Ajout du fichier README - Arabe
-
 Utilisation : samc2/translate-readme@main
-
 Avec :
-
 LANG : ar
-
 - Nom : Ajout du fichier README - Français
-
 Utilisation : samc2/translate-readme@main
-
 Avec :
-
 LANG : fr
-
 - Nom : Ajout du fichier README - Anglais
-
 Utilisation : samc2/translate-readme@main
-
 Avec :
-
 LANG : en   
 
 ## Configuration
