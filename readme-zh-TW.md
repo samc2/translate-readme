@@ -21,49 +21,49 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
 1.  **添加工作流程文件**到您的項目中（例如`.github/workflows/readme.yml`):
 
 
-    name: Translate README
+    名稱： 翻譯自述文件
 
-    on:
-      push:
-        branches:
-          - main
-          - master
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Setup Node.js
-          - uses: actions/checkout@v5
-            uses: actions/setup-node@v6
-            with:
-              node-version: 24
-          - run: npm ci
-          - run: npm test
-          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
-          - name: Adding README - Chinese Simplified
-            uses: samc2/translate-readme@main
-            with:
-              LANG: zh-CN
-          - name: Adding README - Chinese Traditional
-            uses: samc2/translate-readme@main
-            with:
-              LANG: zh-TW
-          - name: Adding README - Hindi
-            uses: samc2/translate-readme@main
-            with:
-              LANG: hi
-          - name: Adding README - Arabic
-            uses: samc2/translate-readme@main
-            with:
-              LANG: ar
-          - name: Adding README - French
-            uses: samc2/translate-readme@main
-            with:
-              LANG: fr
-          - name: Adding README - English
-            uses: samc2/translate-readme@main
-            with:
-              LANG: en
+於：
+  推：
+    分支機構：
+      - 主要
+      - 大師
+職位：
+  構建：
+    運行：烏班圖-最新版
+    步驟：
+     - 使用：行動/結帳@v2
+     - 名稱：安裝 Node.js
+        使用：操作/設置節點@v1
+        與：
+          節點版本：24
+      - 運行：新項目管理 詞
+      - 運行：新項目管理 測試
+      # 國際標準化組織 語言代碼：https://cloud.google.com/translate/docs/languages  
+     - 名稱：添加 添加自述文件 - 簡體中文
+        使用：samc2/translate-readme@main
+        與：
+          蘭格: 唷。-中國
+     - 名稱：添加 添加自述文件 - 繁體中文
+        使用：samc2/translate-readme@main
+        與：
+          蘭格: 唷。-台灣
+     - 名稱：添加自述文件 - 印地語
+        使用：samc2/translate-readme@main
+        與：
+          蘭格：你好
+     - 名稱：添加自述文件 - 阿拉伯語
+        使用：samc2/translate-readme@main
+        與：
+          蘭格：阿爾
+     - 名稱：添加自述文件 - 法語
+        使用：samc2/translate-readme@main
+        與：
+          蘭格: FR
+     - 名稱：添加自述文件 - 英文
+        使用：samc2/translate-readme@main
+        與：
+          語言: 在
 
 ## 組態
 
@@ -71,8 +71,8 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
 
 您可以使用以下選項進一步配置操作：
 
--   `LANG`：您要將自述文件翻譯成的語言。預設為英語。 可以在下面找到支持的語言。
-    （默認：`en`）（必填：`false`)
+-   `只是`：您要將自述文件翻譯成的語言。預設為英語。 可以在下面找到支持的語言。
+    （默認：`在`）（必填：`錯誤的`)
 
 ## 支持的語言
 
