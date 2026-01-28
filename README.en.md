@@ -37,11 +37,7 @@ jobs:
       - run: npm ci
       - run: npm test
       # ISO Language Codes: https://cloud.google.com/translate/docs/languages
-     - name: Adding README - English
-        uses: samc2/translate-readme@main
-        with:
-          LANG: en  
-      - name: Adding README - Chinese Simplified
+     - name: Adding README - Chinese Simplified
         uses: samc2/translate-readme@main
         with:
           LANG: zh-CN
@@ -61,6 +57,10 @@ jobs:
         uses: samc2/translate-readme@main
         with:
           LANG: fr
+      - name: Adding README - English
+        uses: samc2/translate-readme@main
+        with:
+          LANG: en  
 ```
 
 ## Configuration
