@@ -20,43 +20,83 @@ _تقديم ل[DEV: إجراءات جيثب مفتوحة المصدر!](https://
 1.  **أضف ملف سير عمل**لمشروعك (على سبيل المثال`.github/workflows/readme.yml`):
 
 
-    name: Translate README
+   الاسم: ترجمة ملف ملف التعليمات 
 
-    on:
-      push:
-        branches:
-          - main
-          - master
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Setup Node.js
-            uses: actions/setup-node@v1
-            with:
-              node-version: 12.x
-          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
-          - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-CN
-          - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-TW
-          - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: hi
-          - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: ar
-          - name: Adding README - French
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: fr
+عند:
+
+الدفع:
+
+الفروع:
+
+- الرئيسي
+- الرئيسي
+المهام:
+
+البناء:
+
+يعمل على: أوبونتو -أحدث 
+الخطوات:
+
+- الاسم: إعداد Node.js
+
+- يستخدم: actions/checkout@v5
+
+يستخدم: actions/setup-node@v6
+
+مع:
+
+إصدار Node: 24
+
+- التشغيل: npm ci
+
+- التشغيل: npm test
+
+# رموز لغات ISO: https://cloud.google.com/translate/docs/languages
+
+- الاسم: إضافة ملف ملف التعليمات  - الصينية المبسطة
+
+يستخدم: samc2/translate-readme@main
+
+مع:
+اللغة: zh-CN
+
+- الاسم: إضافة ملف ملف التعليمات  - الصينية التقليدية
+
+يستخدم: samc2/translate-readme@main
+
+مع:
+اللغة: zh-TW
+
+- الاسم: إضافة ملف ملف التعليمات  - الهندية
+
+يستخدم: samc2/translate-readme@main
+
+مع:
+اللغة: مرحباً
+
+- الاسم: إضافة ملف ملف التعليمات  - العربية
+
+يستخدم: samc2/translate-readme@main
+
+مع:
+
+اللغة: العربية
+
+- الاسم: إضافة ملف ملف التعليمات  - الفرنسية
+
+يستخدم: samc2/translate-readme@main
+
+مع:
+
+اللغة: الفرنسية
+
+- الاسم: إضافة ملف ملف التعليمات  - الإنجليزية
+
+يستخدم: samc2/translate-readme@main
+
+مع:
+
+اللغة: الإنجليزية 
 
 ## ترتيب
 
@@ -64,8 +104,8 @@ _تقديم ل[DEV: إجراءات جيثب مفتوحة المصدر!](https://
 
 يمكنك تكوين الإجراء بشكل أكبر باستخدام الخيارات التالية:
 
--   `LANG`: اللغة التي تريد ترجمة الملف التمهيدي إليها. الافتراضي هو الصينية المبسطة. (أنا غاني) يمكن العثور على اللغات المدعومة أدناه.
-    (إفتراضي:`zh-CH`) (مطلوب:`false`)
+-   `فقط `: اللغة التي تريد ترجمة الملف التمهيدي إليها. الافتراضي هو الصينية المبسطة. (أنا غاني) يمكن العثور على اللغات المدعومة أدناه.
+    (إفتراضي:`zh-CH`) (مطلوب:`خطأ شنيع `)
 
 ## اللغات المعتمدة
 
